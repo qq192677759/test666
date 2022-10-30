@@ -196,6 +196,7 @@ start() {
     check_status
     if [[ $? == 0 ]]; then
         echo ""
+        info=$(/usr/local/x-ui/x-ui common_sider -show true)
         LOGI "面板已运行，无需再次启动，如需重启请选择重启"
     else
         systemctl start x-ui
